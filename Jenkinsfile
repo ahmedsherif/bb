@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Amass') {
             steps {
+                sh "echo executing with domain ${params.domain}"
                 sh "amass enum -active -d ${params.domain} -o /home/admin_hookah/${params.domain} -timeout 10"
             }
         }
