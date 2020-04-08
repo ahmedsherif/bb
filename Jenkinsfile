@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Amass') {
             steps {
-                sh 'amass enum -active -d yahoo.com -o /home/admin_hookah/yahoo.com -timeout 15'
+                sh 'amass enum -active -d yahoo.com -o /home/admin_hookah/yahoo.com -timeout 10'
             }
         }
         stage('nmap') {
